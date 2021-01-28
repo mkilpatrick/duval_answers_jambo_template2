@@ -1,0 +1,35 @@
+{
+	"configVersion": "1",
+	"https": true,
+	"liveSite": true,
+	"locales": [
+		"en"
+	],
+	"templateVersion": 8,
+	"requireArtifactBuild": false,
+	"features": [
+		{
+			"name": "Go Template Entity Page Set",
+			"streamLabel": "m4pages-demo/pages-processing",
+			"goTemplateEntityPageSet": {
+				"template": "eps.source",
+				"urlTemplate": "eps.url"
+			}
+		},
+		{
+			"name": "External Blog Pages (go templates)",
+			"streamLabel": "account-3356190/blogPosts",
+			"goTemplateEntityPageSet": {
+				"template": "blog.page",
+				"urlTemplate": "blog.url"
+			}
+		}
+	],
+	"ci_config": {
+		"output_directories": ["templates"],
+		"build_setup_cmd": "echo setup",
+		"build_cmd": "echo hello",
+		"serve_setup_cmd": "echo setup",
+		"serve_cmd": "echo serve"
+	}
+}

@@ -1,0 +1,32 @@
+{{define "eps.source" -}}
+<html>
+    <body>
+        <p>Hello, November 13 demo!</p>
+        <h1> Hey Duval </h1>
+        <h1>{{.name}}</h1>
+        <p>{{.description}}</p>
+        <p>Color: {{.color}}</p>
+        <p>Size: {{.size}}</p>
+    </body>
+</html>
+{{end}}
+
+{{define "eps.url" -}}
+{{.name}}-{{.entityId}}-{{.locale}}.html
+{{- end}}
+
+{{define "blog.page" -}}
+<html>
+    <body>
+        <h1>{{.blogTitle}}</h1>
+        <h2>{{.blogDescription}}</h2>
+        <div class="blogBody">
+          {{.blogBody}}
+        </div>
+    </body>
+</html>
+{{end}}
+
+{{define "blog.url" -}}
+blog/{{.blogId}}.html
+{{- end}}
